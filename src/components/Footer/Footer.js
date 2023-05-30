@@ -32,7 +32,7 @@ function Footer() {
         </div>
       </section>
       <div class='footer-links'>
-        {/* <div className='footer-link-wrapper'> */}
+        
         <div class='footer-link-items'>
           <h2 className='orangeText'>About Us</h2>
           <Link to='/'>How it works</Link>
@@ -48,8 +48,7 @@ function Footer() {
           <Link to='/'>Destinations</Link>
           <Link to='/'>Sponsorships</Link>
         </div>
-        {/* </div> */}
-        {/* <div className='footer-link-wrapper'> */}
+        
         <div class='footer-link-items'>
           <h2 className='orangeText'>Videos</h2>
           <Link to='/'>Submit Video</Link>
@@ -64,7 +63,7 @@ function Footer() {
           <Link to='/'>Youtube</Link>
           <Link to='/'>Twitter</Link>
         </div>
-        {/* </div> */}
+        
       </div>
       <hr className='hz-line' />
       <div className="last-footer">

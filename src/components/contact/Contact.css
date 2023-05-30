@@ -1,151 +1,215 @@
-.mainbody{
-    height: 100%;
+ .mainbody{
     background-repeat: no-repeat;
     object-fit: contain;
     width: 100%;
     display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 35px;
+}
+.c-header-container{
+    display: flex;
+    justify-content: space-around;
+}
+.c-image-container{
+    width: 20%;
+    height: 52vh;
+}
+.c-header-container img{
+    width: 100%;
+    height: 100%;
+}
+.c_heading{
+    /* height: 40%; */
+    margin-top: 25px;
+    width: 100%;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    padding: 0.8rem;
+}
+.mainbody .orangeText{
+    font-size: 2.3rem;
+}
+.mainbody h5{
+    font-size: 0.8em;
+}
+.c_heading p{
+    font-weight: 700;
+}
+
+.c_form{
+    height: 60%;
+    width: 100%;
+    padding: 2% 2%;
+}
+
+.card1{
+    display: flex;
     flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.carddesign{
+    width: 22%;
+    min-width: 271px;
+    height:39vh;
+    border-radius: 7px;
+    box-shadow: 1px 3px 3px 3px rgba(0,0,0,0.4);
+}
+
+
+.upper-carddesign{
+    height: 37%;
+    background:  linear-gradient(97.05deg, #4066ff 3.76%, #2949c6 100%);
+    border-radius: 7px;
     position: relative;
 }
 
-.contactimage{
-    height: 94vh;
+.design-image{
+    position: absolute;
+    bottom: -20%;
+    left: 37%;
+    background-color: rgb(192,192,192);
+    /* background-color: orange; */
+    padding: 0.8rem;
+    border-radius: 50%;
+    color: #009688;
+    border: 3px solid var(--blue);
+}
+.upper-carddesign p{
+    font-size: 1.2rem;
+    color: white;
+    position: absolute;
+    top: 10%;
+    left: 28%;
+    font-weight: 800;
+}
+.lower-carddesign{
+    height: 60%;
+    position: relative;
+}
+.lower-carddesign .button{
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+}
+.cardText{
+    position: absolute;
+    top: 14%;
     width: 100%;
-    filter: brightness(100%) invert(0%) sepia(10%) saturate(98%) hue-rotate(346deg) contrast(96%);
- opacity: 0.7;
- position: absolute;
+    text-align: center;
 }
-
-.lefthead{
-    background: rgb(15, 122, 230);
-    width: 40%;
-    height: 94vh;
+.cardText p{
+    font-size: 0.8rem;
+    
 }
-
-.form{
-    background: rgb(15, 122, 230);
-    width: 60%;
-    height: 94vh;
+.cardText .orangeText{
+    font-size: 1.1rem;
+}
+.mediaIcons-div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.social-mediaIcons{
+    
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 3.8rem;
+    /* background-color: #009688; */
+    /* margin-bottom: 0.1rem; */
+    width: 80%;
+    padding: 0.2rem;
+    border-bottom: 1px solid rgba(0,0,0,0.4);
+}
+.mediaIcons-div>:last-child{
+    border: 0;
 }
 
 .formbody{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 70vh;
-    flex-direction: column;
-    width: 35vw;
-    gap: 2rem;
-    border: 4px solid rgb(194, 124, 124);
-    border-radius: 20px;
- background: rgba(232, 227, 227, 0.382);
+    width: 100%;
 }
-
-.formbody h1{
-    text-transform: uppercase;
-    font-size: 80px;
-    color: rgb(117, 113, 246);
-    -webkit-text-stroke: 1px #a7d997;
+.formbody .orangeText{
+    margin-bottom: 25px;
 }
-
+.react-responsive-modal-modal {
+    background-color: rgba(0,0,0,0.8);
+    width: 80%;
+    padding: 1.8rem;
+}
 .input1{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    width: 23vw;
 }
-
-input,textarea{
-    border-radius: 12px;
+.react-responsive-modal-closeButton {
+    color: wheat;
+    background-color: white;
+    border-radius: 6px;
+}
+.input1 .name{
     border: 2px solid orange;
+    margin-bottom: 20px;
+    padding: 0.4rem;
+    outline: none;
 }
-input::placeholder{
-    position: relative;
- left: 12px;
-}
-
-textarea::placeholder{
-    font-size: x-large;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-button{
-    width: 6vw;
-    height: 5vh;
+.input1 .email{
     border: 2px solid orange;
-    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 0.4rem;
+    outline: none;
 }
-
-.c_1{
-    display: flex;
-    flex-direction: row;
-    height: 40%;
-    z-index: 999;
+.message{
     width: 100%;
-    align-items: center;
-    justify-content: center;
+    border: 2px solid orange;
+    margin-bottom: 20px;
+    padding: 0.4rem;
+    outline: none;
+    border-radius: 8px;
 }
 
-.c_head{
-    font-size: 40px;
-    background: linear-gradient(to right,#ec1e07,#d81a08);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.contact-user{
+    
+    border-radius: 50%;
+    border: 2px solid rgb(192,192,192);
+    width: 100px;
+    height: 100px;
+    padding: .2rem;
+    margin-left: 45%;
 }
-
-hr{
-    color: rgb(231, 7, 7);
+.footer-heading{
+    padding: 0.8rem;
 }
-
-.para{
-    display:inline-flexbox;
-    overflow: hidden;
-    align-items: center;
-    position: relative;
-    justify-content: center;
-    left: 10%;
-    color: whitesmoke;
+@media (max-width:720px) {
+    .mainbody .orangeText {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .c_heading .secondaryText{
+        font-size: 1.2rem;
+    }
+    .c_heading p{
+        font-size: 1.4rem;
+    }
 }
-
-.emails {
-    height: 4vh;
-    width: 4vw;
-}
-
-.phones{
-    width: 4vw;
-    height: 4vh;
-}
-
-.connect{
-    height: 14vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-    gap: 3rem;
-    padding-top: 9%;
-    padding-left: 18%;
-}
-
-.emailround{
-    display: flex;
-    flex-direction: row;
-}
-
-.phoneround{
-    display: flex;
-    flex-direction: row;
-    width:54%;
-}
-
-.paratext{
-    padding-left: 23%;
-    color: #000000ac;
-    z-index: 9;
-    font-size: large;
+@media (max-width:520px) {
+    .mainbody .orangeText {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .c_heading .secondaryText{
+        font-size: 0.8rem;
+    }
+    .c_heading p{
+        font-size: 1.0rem;
+    }
 }

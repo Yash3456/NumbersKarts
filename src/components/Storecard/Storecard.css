@@ -1,47 +1,7 @@
-/* .Body{
-    height: 31vh;
-    width: 17.6vw;
-    display: flex;
-    flex-direction: column;
-    border: 2px solid blue;
-    border-radius: 12px;
-    box-shadow: 1px 1px 20px rgb(123, 128, 130);
-}
-
-.storeCard{
-    font-size: larger;
-    align-items: center;
-    height: 4vh;
-    justify-content: center;
-    display: flex;
-}
-.cardbody{
-    height: 21vh;
-    display: inline-block;
-    background-color: orange;
-}
-.cardfooter{
-    display: flex;
-    flex-direction: row;
-    height: 6vh;
-}
-
-.amount{
-    width: 45%;
-    align-items: center;
-    justify-content: right;
-    display: flex;
-    background-color: blue;
-}
-
-.addtocart{
-    background-color: gray;
- width: 55%;
-} */
-
 .cards {
     display: flex;
-    background-color: white;
+    background-color:white;
+    color: white;
     transition: transform .2s;
     position: relative;
     border-radius: 10px;

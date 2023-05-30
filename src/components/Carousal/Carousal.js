@@ -74,8 +74,10 @@ const Carousal = () => {
           <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide} />
         </motion.div>
         <motion.div className='Imagesec'
-          initial={{ x: '7rem', opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ x: '7rem', opacity: 1 }}
+          whileInView={{x:0}}
+          whileHover={{ x: 0, rotate:[0,90,-90]}}
+          // whileHover={{rotate:[0,90,0,-90,0]}}
           transition={{
             duration: 4,
             type: "spring",

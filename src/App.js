@@ -19,6 +19,7 @@ function App() {
       <Route exact path="/discount" element ={<Discount/>}/>
       <Route exact path="/Contact" element={<Contactus/>}/>
       <Route exact path="/signin" element ={<Signin/>}/>
+      
      </Routes>
      <Footer/>
      </BrowserRouter>

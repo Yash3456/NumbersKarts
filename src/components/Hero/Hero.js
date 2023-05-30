@@ -26,26 +26,26 @@ const Hero = () => {
 
                             </motion.h1>
                         </div>
-                        <motion.div 
-                        initial={{ y: '2rem', opacity: 0 }}
-                                animate={{ y: 0, opacity: 1 }}
-                                transition={{
-                                    duration: 2,
-                                    type: "spring",
-                                }}
-                        className="hero-desc flexColStart secondaryText">
+                        <motion.div
+                            initial={{ y: '2rem', opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{
+                                duration: 2,
+                                type: "spring",
+                            }}
+                            className="hero-desc flexColStart secondaryText">
                             <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. </span>
                             <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum accusamus.</span>
                         </motion.div>
 
-                        <motion.div 
-                        initial={{ y: '2rem', opacity: 0 }}
-                                animate={{ y: 0, opacity: 1 }}
-                                transition={{
-                                    duration: 2,
-                                    type: "spring",
-                                }}
-                        className="search-bar flexCenter">
+                        <motion.div
+                            initial={{ y: '2rem', opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{
+                                duration: 2,
+                                type: "spring",
+                            }}
+                            className="search-bar flexCenter">
                             <div className='flexColStart'>
                                 <button className='button'>Contact-Us</button>
                                 <span className='secondaryText pk'>Try Contacting with us </span>
@@ -57,15 +57,15 @@ const Hero = () => {
                             </div>
                         </motion.div>
 
-                        <motion.div 
-                        initial={{ y: '-2rem', opacity: 0 }}
-                                whileInView={{ y: 0, opacity: 1 }}
-                                transition={{
-                                    duration: 2,
-                                    type: "spring",
-                                    bounce:0.8
-                                }}
-                        className="flexCenter stats">
+                        <motion.div
+                            initial={{ y: '-2rem', opacity: 0 }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            transition={{
+                                duration: 2,
+                                type: "spring",
+                                bounce: 0.8
+                            }}
+                            className="flexCenter stats">
                             <div className="flexColStart stat">
                                 <span>
                                     <CountUp start={1500} end={2000} duration={4} />
@@ -92,7 +92,7 @@ const Hero = () => {
                     </div>
                     <motion.div
                         initial={{ x: '7rem', opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
+                        whileInView={{ x: 0, opacity: 1 }}
                         transition={{
                             duration: 2,
                             type: "tween",

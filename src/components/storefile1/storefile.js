@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React, { Component } from 'react'
 import "./storefile.css";
 import Storecard from '../Storecard/Storecard';
 
@@ -57,6 +57,15 @@ class Storefile extends Component {
             <label className="filter1"><input type="checkbox" className="inputs" /> <span>xy-xy-xy-xy-xy</span></label>
             <label className="filter1"><input type="checkbox" className="inputs" /> <span>xy-xy-xy-xy-xy</span></label>
             <label className="filter1"><input type="checkbox" className="inputs" /> <span>xy-xy-xy-xy-xy</span></label>
+            <label className="filter1"><input type="checkbox" className="inputs" /> <span>xy-xy-xy-xy-xy</span></label>
+            <label className="filter1"><input type="checkbox" className="inputs" /> <span>xy-xy-xy-xy-xy</span></label>
+            <label className="filter1"><input type="checkbox" className="inputs" /> <span>xy-xy-xy-xy-xy</span></label>
+            <label className="filter1"><input type="checkbox" className="inputs" /> <span>xy-xy-xy-xy-xy</span></label>
+            <label className="filter1"><input type="checkbox" className="inputs" /> <span>xy-xy-xy-xy-xy</span></label>
+            <label className="filter1"><input type="checkbox" className="inputs" /> <span>xy-xy-xy-xy-xy</span></label>
+            <label className="filter1"><input type="checkbox" className="inputs" /> <span>xy-xy-xy-xy-xy</span></label>
+            <label className="filter1"><input type="checkbox" className="inputs" /> <span>xy-xy-xy-xy-xy</span></label>
+            <label className="filter1"><input type="checkbox" className="inputs" /> <span>xy-xy-xy-xy-xy</span></label>
           </div>
         </div>
         
@@ -64,7 +73,7 @@ class Storefile extends Component {
         <div className='cardfield'>
           {
             this.state.Users.map((posts, index) => (
-              <Storecard indexx={index} postss={posts} />
+              <Storecard  />
             )
             )
           }

@@ -1,8 +1,11 @@
 import Faq from '../components/Accordian/Faq';
-import Header from '../components/Header/Header';
 import Hero from '../components/Hero/Hero';
 import Sponsers from '../components/Spnonsers/Sponsers';
 import Carousal from "../components/Carousal/Carousal"
+import MultipleItems from '../components/DiscCarausel/DiscCarousel'
+import img from "../assests/Screenshot (106).png"
+import Vip from '../components/vip/Vip';
+import HomeCarsousal from '../components/HomeCarausal/HomeCarusal';
 
 const Home = () =>{
     return (
@@ -13,8 +16,12 @@ const Home = () =>{
       </div>
       <Sponsers/>
       <Carousal/>
+      <HomeCarsousal/>
       <Faq/>
-     </>
+      <img src={img} className='poster-image' />
+      <Vip/>
+      <MultipleItems/>
+    </>
     );
 }
 

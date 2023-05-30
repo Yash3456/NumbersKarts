@@ -1,21 +1,21 @@
 import "./storecar.css";
 import React, { Component } from "react";
 import Slider from "react-slick";
-import image1 from "../../assests/car1.jpg";
+import image1 from "../../assests/vip-number.jpg";
 import image2 from "../../assests/car2.jpg";
-import image3 from "../../assests/car2.jpg";
+import image3 from "../../assests/vip-number2.jpg";
 import image4 from "../../assests/car4.jpg";
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
-// FaSearch
+
 export default class Fading extends Component {
   render() {
     const settings = {
       dots: true,
       lazyLoad: true,
       infinite: true,
-      speed: 3000,
+      speed: 1000,
       arrows: true,
       autoplay: true,
       slidesToShow: 1,

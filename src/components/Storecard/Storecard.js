@@ -1,31 +1,8 @@
-// import React from 'react'
-// import "./Storecard.css"
-
-// const Storecard = ({indexx,postss}) => {
-//   return (
-//     <div className='Body'>
-//     <div className='storeCard' key={indexx}>
-//     <span className='cardhead'>{postss.id}</span>
-//     </div>
-//     <div className='cardbody'>
-//         {postss.title}
-//     </div>
-//     <div className='cardfooter'>
-//         <div className='amount'>{postss.id}</div>
-//         <div className='addtocart'>{postss.id}</div>
-//     </div>
-//     </div>
-//   )
-// }
-
-// export default Storecard
-
-
 import React, {useEffect, useState} from "react"
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton"
 import "./Storecard.css"
 import { Link } from "react-router-dom"
-
+import { motion } from "framer-motion"
 import img1 from "../Spnonsers/images/realty.png"
 const Card = (props) => {
 
@@ -41,7 +18,9 @@ const Card = (props) => {
     {
         isLoading
         ?
-        <div className="cards">
+        <div className="cards"
+        
+        >
             <SkeletonTheme color="#202020" highlightColor="#444">
                 <Skeleton height={300} duration={2} />
             </SkeletonTheme>

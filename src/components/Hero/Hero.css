@@ -18,7 +18,7 @@
     overflow: hidden;
     /* border-radius: 15rem 15rem 0 0; */
     border-radius: 12px;
-    rotate: -2deg;
+    /* rotate: -2deg; */
     border: 2px solid rgba(228, 217, 217, 0.12);
     box-shadow: 1px 1px 50px lightblue;
     }

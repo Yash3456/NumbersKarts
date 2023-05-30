@@ -1,18 +1,13 @@
 .c_image{
     height: 48vh;
     width:100%;
-   
 }
 
 .c_slider{
-    /* position: relative; */
     width: 100vw;
-    /* left: 6%; */
     overflow: hidden;
     border-radius: 13px;
     box-shadow: 1px 1px 12px rgba(30, 33, 33, 0.523);
-    /* margin-top:1%; */
-    /* background: rgba(53, 49, 49, 0.159); */
     height: 52vh;
 }
 
@@ -31,7 +26,7 @@
     margin-bottom: 15px;
 }
 .search-box-box h3{
-    /* font-weight: 00; */
+    
     font-size: 0.9rem;
     color: rgba(0, 0, 0, 0.8);
 }

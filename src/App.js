@@ -7,6 +7,7 @@ import Discount from "./Pages/Discount";
 import Contactus from './Pages/Contact';
 import Signin from "./Pages/signin";
 import Footer from './components/Footer/Footer';
+import { Cart } from './components/AddToCart/cart';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
       <Route exact path="/discount" element ={<Discount/>}/>
       <Route exact path="/Contact" element={<Contactus/>}/>
       <Route exact path="/signin" element ={<Signin/>}/>
-      
+      <Route exact path="/cart" element={<Cart/>}/>
      </Routes>
      <Footer/>
      </BrowserRouter>

@@ -1,0 +1,56 @@
+.disc-wrapper{
+    padding-top: 3.8rem;
+}
+
+.discfile-container{
+    width: 100%;
+    display: flex;
+    padding: 0.8rem;
+    padding-left: 3.8rem;
+}
+
+
+.d-left{
+    flex-basis: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.d-right{
+    width: 20%;
+    height: 40vh;
+}
+.d-right .image-container{
+    width: 15rem;
+    height: 20rem;
+    margin-bottom: 1.2rem ;
+    box-shadow: 0;
+}
+.discfile-heading{
+    text-align: center;
+    margin-bottom: 1.6rem;
+}
+.discfile-heading .secondaryText{
+    letter-spacing: 1.8rem;
+    color: rgba(0,0,0,0.2);
+}
+@media (max-width:1030px) {
+    .d-right{
+        display: none;
+    }
+    .d-left{
+        flex-basis: 100%;
+    }
+    .d-left a{
+        width: 45%;
+    }
+}
+@media (max-width:760px){
+    .d-left a{
+        width: 100%;
+        margin-left: 0.8rem;
+    }
+    .discfile-container {
+       padding-left: 0.4rem;
+       align-items: center;
+    }    
+}

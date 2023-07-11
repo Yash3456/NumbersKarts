@@ -3,6 +3,9 @@ import dImg from "./desktopimage.png"
 import "./Hero.css"
 import CountUp from 'react-countup'
 import { motion } from "framer-motion"
+import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+
 const Hero = () => {
     return (
         <div>
@@ -47,12 +50,12 @@ const Hero = () => {
                             }}
                             className="search-bar flexCenter">
                             <div className='flexColStart'>
-                                <button className='button'>Contact-Us</button>
+                            <button className='button'><a href="/Contact">Contact-Us</a></button>
                                 <span className='secondaryText pk'>Try Contacting with us </span>
                             </div>
 
                             <div className='flexColStart'>
-                                <button className='button'>Search</button>
+                                <button className='button'><a href="/store">Search</a></button>
                                 <span className='secondaryText pk'>Start searching your number </span>
                             </div>
                         </motion.div>

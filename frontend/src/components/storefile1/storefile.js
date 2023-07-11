@@ -22,7 +22,7 @@ const Storefile = () =>{
           <button className="button"><FaSearch /></button>
         </div>
       </div>
-      <div className="filters">
+      {/* <div className="filters">
         <h3 >Categories</h3>
         <label className="filter1"><input type="checkbox" className="inputs" /> <span>xy-xy-xy-xy-xy</span></label>
         <label className="filter1"><input type="checkbox" className="inputs" /> <span>xy-xy-xy-xy-xy</span></label>
@@ -43,7 +43,7 @@ const Storefile = () =>{
         <label className="filter1"><input type="checkbox" className="inputs" /> <span>xy-xy-xy-xy-xy</span></label>
         <label className="filter1"><input type="checkbox" className="inputs" /> <span>xy-xy-xy-xy-xy</span></label>
         <label className="filter1"><input type="checkbox" className="inputs" /> <span>xy-xy-xy-xy-xy</span></label>
-      </div>
+      </div> */}
     </div>
     
 

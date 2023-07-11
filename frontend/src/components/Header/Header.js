@@ -15,7 +15,7 @@ const Header = () => {
     return (
         <section className='h-wrapper'>
             <div className="flexCenter h-container paddings innerWidth">
-                <img src={logodesign} alt="logo"/>
+                
                     <div className="h-menu flexCenter"
                         style={getMenuStyles(menuOpened)}
                     >

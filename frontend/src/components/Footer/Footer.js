@@ -2,6 +2,13 @@ import React from 'react';
 import './Footer.css';
 import { Link } from 'react-router-dom';
 function Footer() {
+
+   let value ="";
+
+   const handle =(text)=>{
+  value = text;
+   } 
+
   return (
     <div className='footer-container'>
       <div className="footer-heading">
@@ -26,8 +33,8 @@ function Footer() {
         </p>
         <div className='input-areas'>
 
-          <input type="number" placeholder="Search Your Number" />
-          <button className="button">Search </button>
+          <input type="number" placeholder="Search Your Number" onChange={(e)=> handle(e.target.value)} />
+          <button className="button"><a href={value.length===0?"/":"/store"}>Search</a></button>
 
         </div>
       </section>

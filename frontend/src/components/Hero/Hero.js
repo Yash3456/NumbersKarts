@@ -50,12 +50,12 @@ const Hero = () => {
                             }}
                             className="search-bar flexCenter">
                             <div className='flexColStart'>
-                            <button className='button'><a href="/Contact">Contact-Us</a></button>
+                            <button className='button'><Link to={"/Contact"}>Contact-Us</Link></button>
                                 <span className='secondaryText pk'>Try Contacting with us </span>
                             </div>
 
                             <div className='flexColStart'>
-                                <button className='button'><a href="/store">Search</a></button>
+                                <button className='button'><Link to={"/store"}>Search</Link></button>
                                 <span className='secondaryText pk'>Start searching your number </span>
                             </div>
                         </motion.div>

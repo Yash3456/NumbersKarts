@@ -22,7 +22,7 @@ export default class HomeCarsousal extends Component {
       slidesToScroll: 1
     };
     return (
-      <div style={{ display: "flex", flexDirection: "row",height:"65vh",marginTop:"150px"}}>
+      <div style={{ display: "flex", flexDirection: "row",height:"65vh"}}>
         
 
         <div className="h_slider">

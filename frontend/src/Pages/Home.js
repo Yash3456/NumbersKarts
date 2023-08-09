@@ -9,7 +9,7 @@ import HomeCarsousal from '../components/HomeCarausal/HomeCarusal';
 
 const Home = () =>{
     return (
-     <>
+     <div>
       <div>
         <div className="white-gradient" />
         <Hero />
@@ -21,7 +21,7 @@ const Home = () =>{
       <img src={img} className='poster-image' alt="homeimage"/>
       <Vip/>
       <MultipleItems/>
-    </>
+    </div>
     );
 }
 

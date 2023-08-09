@@ -1,181 +1,69 @@
-import styled from '@emotion/styled'
-import { Box, Button, Dialog, TextField, Typography } from '@mui/material'
-import React, { useState } from 'react'
-import {authenticateLogin, authenticateSignup} from '../Service/api'
-import { useContext } from 'react'
-import { Datacontext } from '../Context/Dataprovider'
-import swal from "sweetalert";
+import React from 'react'
+import "./Login.css"
+import baimage from "../../assests/login-page-women2.png";
+import { motion } from "framer-motion";
+import { FaFacebook } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
+import { FaUser } from 'react-icons/fa';
+import { FaLockOpen } from 'react-icons/fa';
 
-const Textlabel = styled(Box)`
- height:70vh;
- width:90vh; 
-`
 
-const Imagebox = styled(Box)`
-background:#2874f0 url(https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/login_img_c4a81e.png) center 85% no-repeat;
-height:85.5%;
-border-top-right-radius:10px;
-width:30%;
-padding: 45px 35px;
-&>p,&>h5{
-  color:#ffffff;
-  font-weight:500;
-}
-`
-
-const Wrapper = styled(Box)`
-padding: 25px 35px;
-    display: flex;
-    flex: 1;
-    overflow: auto;
-    flex-direction: column;
-    & > div, & > button, & > p {
-        margin-top: 20px;
-    }
-`
-
-const LoginButton = styled(Button)`
-text-transform: none;
-background:#FB641B;
-color:#fff;
-height: 48px;
-border-radius: 2px;
-`
-const RequestOTP = styled(Button)`
-    text-transform: none;
-    background: #fff;
-    color: #2874f0;
-    height: 48px;
-    border-radius: 2px;
-    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
-`
-const Text = styled(Typography)`
-font-size:12px;
-color: #878787;
-`
-
-const CreateAaccout = styled(Typography)`
-margin: auto 0 5px 0;
-text-align: center;
-color: #2874f0;
-font-weight: 600;
-font-size: 14px;
-cursor: pointer
-`
-
-const accountloginview = {
-  login: {
-    view: 'login',
-    heading: 'Login',
-    subHeading: 'Get access to your Orders, Wishlist and Recommendations'
-},
-signup: {
-    view: 'signup',
-    heading: "Looks like you're new here",
-    subHeading: 'Signup with your mobile to get started'
-}
-}
-
-const Error = styled(Typography)`
-font-size:10px;
-color:#ff6161;
-line-height:0;
-margin-top:10px;
-font-weight:600;
-`
-
-const signupInitialValues = {
-  firstname: '',
-  lastname: '',
-  username: '',
-  email: '',
-  password: '',
-  phone: ''
-};
-
-const loginintialvlues = {
- username:'',
- password:''
-};
-
-const LoginDialogue = ({open,setopen}) => {
-
-const [Account,toggleacount] = useState(accountloginview.login)
-const [signup,setsignp] = useState(signupInitialValues);
-const [account,setaccount] = useContext(Datacontext);
-const [login,setlogin] = useState(loginintialvlues);
-const [alert,setalert] = useState(false);
-
-const handleclose = () =>{
- setopen(false);
- toggleacount(accountloginview.login);
- setalert(false); 
-}
-
-const inputchange = (e) =>{
-  setsignp({...signup, [e.target.name]: e.target.value });
-}
-
-const signinfunc = async () =>{
-  let response = await authenticateSignup(signup);
- if(!response) return;
- handleclose();
- setaccount(signup.firstname);
-}
-
-const valuechange = (e) =>{
- setlogin({...login,[e.target.name]:e.target.value});
-}
-
-const logintest =async ()=>{
-   let response = await authenticateLogin(login);
-  console.log(response);
-  if(response.status===200){
-    handleclose();
-    setaccount(response.data.data.firstname);
-    }else{
-    setalert(true);
-    swal("Oops!", "Something went wrong!", "error");
-  }
-}
-
+const LoginPage = () => {
   return (
-    <Dialog open={open} onClose={()=> handleclose()} PaperProps={{sx:{maxWidth:'unset'}}}>
-     <Textlabel>
-      <Box style={{display:"flex",height:"100%"}}>
-      <Imagebox>
-    <Typography variant='h5'>{Account.heading}</Typography>
-    <Typography style={{marginTop:20}}>{Account.subHeading}</Typography>
-      </Imagebox>
-{
-  Account.view === 'login'?
-  <Wrapper>
-  <TextField variant="standard" onChange={(e)=>valuechange(e)} name='username' label="Enter Username...."/>
-   {alert && <Error>Enter valid Username or Password</Error>}
-  <TextField variant="standard" onChange={(e)=> valuechange(e)} name='password' label="Enter Password..."/>
-  <Text>by continuing, you agree with flipkart terms and conditions.</Text>
-  <LoginButton onClick={()=> logintest()}>Login</LoginButton>
-  <Typography style={{textAlign:'center'}}>OR</Typography>
-  <RequestOTP>Request for OTP</RequestOTP>
-  <CreateAaccout onClick={()=> toggleacount(accountloginview.signup)}>New to Flipkart? Create an Account.</CreateAaccout>
-</Wrapper>
-:
-<Wrapper>
-<TextField variant="standard" onChange={(e)=> inputchange(e)} name='firstname' label="Enter FirstName..."/>
-<TextField variant="standard" onChange={(e)=> inputchange(e)} name='lastname' label="Enter LastName..."/>
-<TextField variant="standard" onChange={(e)=> inputchange(e)} name='username' label="Enter UserName..."/>
-<TextField variant="standard" onChange={(e)=> inputchange(e)} name='email' label="Enter Email..."/>
-<TextField variant="standard" onChange={(e)=> inputchange(e)} name='password' label="Enter Password..."/>
-<TextField variant="standard" onChange={(e)=> inputchange(e)} name='phone' label="Enter Phone Number..."/>
-<LoginButton onClick={()=> signinfunc()}>Continue</LoginButton>
+    <div className='loginmain'>
+      <motion.div className="loginimage"
+        initial={{x:'-7rem',y:'-7rem',opacity:'0'}}
+        whileInView={{ x: 0,y:0, opacity: 1 }}
+        transition={{
+          duration: 4,
+          type: "spring",
+          bounce:0.7,
+        }}
+      >
+        <img src={baimage} alt='login_image' className='log-image' />
+      </motion.div>
+      <motion.div className="loginform-container"
+      initial={{x:'7rem',opacity:'0'}}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{
+          duration: 4,
+          type: "spring",
+          
+        }}
+      >
 
-<CreateAaccout onClick={()=> toggleacount(accountloginview.login)}>Existing User? Login</CreateAaccout>
-</Wrapper>
-}
-      </Box>
-     </Textlabel>
-    </Dialog>
+        <div className='loginhead'>
+          <span className='sign'>Sign In</span> <br />
+
+          <p className='account'> New to NumberWala ? <a href="#" className='linktext'>Create an Account</a></p>
+        </div>
+        <form className='formcontent'>
+          <label className='login-input'>
+            <span className='input-image'><FaUser size="1.2rem" /></span>
+            <input type="text" className='loginname' name="Name" placeholder='Type Your Username' required /></label>
+          <label className='login-input'>
+            <span className='input-image'><FaLockOpen size="1.2rem" /></span>
+            <input type="password" className='pass' name="Password" placeholder='Enter Your Password' required />
+          </label>
+
+          <button className='button'> Sign In</button>
+          <p className='lowertext orangeText'>Or Sign in with</p>
+          <div className='loginicons '>
+            <div className='google '>
+              <FaGoogle size="1.6rem" color="orangered" />
+              <span className='secondaryText'>Sign in with Google</span>
+            </div>
+            <div className='facebook'>
+              <FaFacebook size="1.6rem" color="blue" />
+              <span className='secondaryText'>Sign in with Facebook</span>
+            </div>
+          </div>
+        </form>
+      </motion.div>
+
+
+    </div>
   )
 }
 
-export default LoginDialogue
+export default LoginPage

@@ -4,7 +4,6 @@ import { Datacontext } from '../Context/Dataprovider';
 import { BiMenuAltRight } from "react-icons/bi"
 import logodesign from "../../assests/svglogo.png";
 import {Link} from "react-router-dom";
-import Profile from '../Login/Profile';
 import styled from '@emotion/styled';
 import { Badge, Box, Button, Typography } from '@mui/material'
 import headingtext from "../../assests/headingtext.png";
@@ -52,14 +51,7 @@ const Header = () => {
                         <Link to={"/contact"}>Contact Us</Link>
                         <Link to={"/cart"}>My Cart</Link>
                         <button className='button'>
-                        {
-                account ?
-                (<Profile account={account} setaccount={setaccount}/>)
-                : 
-                (
-                <Loginbutton variant="contained" onClick={() => setopen(true)}>Login</Loginbutton>
-                )
-            }
+                        <Link to={"/signin"}>Sign Up</Link>
                         </button>
 
                     </div>
